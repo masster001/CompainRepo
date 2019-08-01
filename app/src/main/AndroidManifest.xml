@@ -9,9 +9,11 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".PavelActivityTwo">
+        <activity android:name=".Pavel_Activity.main20.PavelMain20Activity">
         </activity>
-        <activity android:name=".PavelActivityOne">
+        <activity android:name=".Pavel_Activity.PavelActivityTwo">
+        </activity>
+        <activity android:name=".Pavel_Activity.PavelMainActivity">
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>

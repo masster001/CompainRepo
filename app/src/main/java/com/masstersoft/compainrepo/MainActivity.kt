@@ -3,9 +3,9 @@ package com.masstersoft.compainrepo
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.masstersoft.compainrepo.Pavel_Activity.PavelMainActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.btn1
-import kotlinx.android.synthetic.main.activity_pavel_one.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btn2.setOnClickListener {
-            startActivity(Intent(this, PavelActivityOne::class.java))
+            startActivity(Intent(this, PavelMainActivity::class.java))
         }
     }
 
