@@ -1,4 +1,4 @@
-package com.masstersoft.compainrepo.Pavel_Activity.main20
+package com.masstersoft.compainrepo.Pavel_Activity.HomeWork20
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,12 +6,12 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.masstersoft.compainrepo.R
 
-class PavelMain20Activity : AppCompatActivity(), PavelMain20NFI {
+class PHW20MainActivity : AppCompatActivity(), PHW20NFI {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_pavel_main_20)
+        setContentView(R.layout.activity_pavel_main20)
 
 //        supportFragmentManager
 //            .beginTransaction()
@@ -21,14 +21,14 @@ class PavelMain20Activity : AppCompatActivity(), PavelMain20NFI {
 
         supportFragmentManager
             .beginTransaction()
-            .replace(R.id.content, PavelMain20Frg1())
+            .replace(R.id.content, PHW20Frg1())
             .addToBackStack("frg")
             .commit()
     }
 
 
     override fun nextFragment(frg: Fragment) {
-        if (frg is PavelMain20Frg1) {
+        if (frg is PHW20Frg1) {
             supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
         }
 
