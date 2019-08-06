@@ -1,9 +1,9 @@
 package com.masstersoft.compainrepo.async_tasks
 
-import android.annotation.SuppressLint
 import android.os.AsyncTask
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import com.masstersoft.compainrepo.R
 import kotlinx.android.synthetic.main.activity_async.*
 
@@ -14,24 +14,29 @@ class AsyncActivity : AppCompatActivity() {
         setContentView(R.layout.activity_async)
 
         btn1.setOnClickListener {
-            @SuppressLint("StaticFieldLeak")
             object : AsyncTask<Void, Int, String>() {
                 override fun onPreExecute() {
-                    super.onPreExecute()
+                    progress.isVisible = true
+                    info.text = ""
                 }
 
                 override fun doInBackground(vararg p0: Void?): String {
-                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                    for (i in 0..100) {
+                        Thread.sleep(200)
+                        publishProgress(i)
+                    }
+                    return "AsyncTask stopped"
                 }
 
                 override fun onPostExecute(result: String?) {
-                    super.onPostExecute(result)
+                    progress.isVisible = false
+                    info.text = result
                 }
 
                 override fun onProgressUpdate(vararg values: Int?) {
-                    super.onProgressUpdate(*values)
+                    info.text = values[0].toString()
                 }
-            }
+            }.execute()
         }
 
         btn2.setOnClickListener {
