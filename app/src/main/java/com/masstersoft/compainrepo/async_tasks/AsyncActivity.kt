@@ -1,7 +1,8 @@
-package com.masstersoft.compainrepo
+package com.masstersoft.compainrepo.async_tasks
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.masstersoft.compainrepo.R
 
 class AsyncActivity : AppCompatActivity() {
 

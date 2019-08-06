@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.masstersoft.compainrepo.Pavel_Activity.PavelMainActivity
+import com.masstersoft.compainrepo.async_tasks.AsyncActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
