@@ -1,11 +1,10 @@
 package com.masstersoft.compainrepo
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.masstersoft.compainrepo.Pavel_Activity.PavelMainActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.btn1
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,6 +19,10 @@ class MainActivity : AppCompatActivity() {
 
         btn2.setOnClickListener {
             startActivity(Intent(this, PavelMainActivity::class.java))
+        }
+
+        btn3.setOnClickListener {
+            startActivity(Intent(this, AsyncActivity::class.java))
         }
     }
 
