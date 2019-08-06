@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Go Activity Kirill"
+            android:id="@+id/btn1"/>
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Go Activity Pavel"
+            android:id="@+id/btn2"/>
+
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Go to the AsyncActivity"
+            android:id="@+id/btn3"/>
+
+</LinearLayout>
