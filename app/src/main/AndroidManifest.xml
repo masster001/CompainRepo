@@ -9,6 +9,8 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".async_tasks.AsyncActivityRoman">
+        </activity>
         <activity android:name=".async_tasks.AsyncActivity">
         </activity>
         <activity android:name=".Pavel_Activity.HomeWork21.PHW21MainActivity">
