@@ -11,6 +11,8 @@
             android:theme="@style/AppTheme">
         <activity android:name=".async_tasks.AsyncActivity">
         </activity>
+        <activity android:name=".async_tasks.AsycnActivityKirill">
+        </activity>
         <activity android:name=".Pavel_Activity.HomeWork21.PHW21MainActivity">
         </activity>
         <activity android:name=".Pavel_Activity.HomeWork20.PHW20MainActivity">
