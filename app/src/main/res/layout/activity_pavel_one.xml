@@ -15,6 +15,11 @@
             android:text="HomeWork №21 (chat)"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+    <Button
+            android:id="@+id/pBtnMain3"
+            android:text="ClassWork №24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
 
 </LinearLayout>
