@@ -14,13 +14,17 @@ class AsyncActivity : AppCompatActivity() {
         setContentView(R.layout.activity_async)
 
         btn1.setOnClickListener {
-            object : AsyncTask<Void, Int, String>() {
+            object : AsyncTask<Double, Int, String>() {
+                var internetAvailable: Boolean = false
                 override fun onPreExecute() {
                     progress.isVisible = true
                     info.text = ""
+                    if (internetAvailable) cancel(internetAvailable)
                 }
 
-                override fun doInBackground(vararg p0: Void?): String {
+                override fun doInBackground(vararg p0: Double?): String {
+                    if (isCancelled) return "AsyncTask cancelled"
+
                     for (i in 0..100) {
                         Thread.sleep(200)
                         publishProgress(i)
