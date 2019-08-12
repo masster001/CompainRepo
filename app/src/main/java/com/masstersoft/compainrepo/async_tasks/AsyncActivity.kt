@@ -1,5 +1,6 @@
 package com.masstersoft.compainrepo.async_tasks
 
+import android.content.Intent
 import android.os.AsyncTask
 import android.os.Bundle
 import android.os.Handler
@@ -100,6 +101,10 @@ class AsyncActivity : AppCompatActivity() {
 
         btn3.setOnClickListener {
 
+        }
+
+        btn4.setOnClickListener {
+            startActivity(Intent(this, HandlerActivity::class.java))
         }
     }
 }

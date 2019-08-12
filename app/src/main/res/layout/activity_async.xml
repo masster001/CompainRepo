@@ -11,6 +11,7 @@
             android:layout_height="50dp"
             android:text="Start AsyncTask"
             android:id="@+id/btn1"/>
+
     <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -23,16 +24,24 @@
             android:text="Thread start"
             android:id="@+id/btn3"/>
 
-    <ProgressBar android:id="@+id/progress"
-                 android:layout_width="match_parent"
-                 android:layout_height="60dp"
-                 android:visibility="gone"/>
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="HandlerActivity start"
+            android:id="@+id/btn4"/>
 
-    <TextView android:id="@+id/info"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="Information"
-              android:textSize="24dp"
-              android:textColor="@android:color/background_dark"/>
+    <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:visibility="gone"/>
+
+    <TextView
+            android:id="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Information"
+            android:textSize="24dp"
+            android:textColor="@android:color/background_dark"/>
 
 </LinearLayout>
