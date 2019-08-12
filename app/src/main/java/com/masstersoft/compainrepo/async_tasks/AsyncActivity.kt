@@ -22,14 +22,20 @@ class AsyncActivity : AppCompatActivity() {
     override fun onPause() {
         super.onPause()
         gameOn = false
-        Log.i(TAG, "onPause")
     }
 
     override fun onResume() {
         super.onResume()
-        gameOn = true
-        handler.sendEmptyMessage(0)
-        Log.i(TAG, "onResume")
+    }
+
+    fun preExecute() {
+        progress.isVisible = true
+        info.text = ""
+    }
+
+    fun postExecute(result: String?) {
+        progress.isVisible = false
+        info.text = result
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,18 +46,20 @@ class AsyncActivity : AppCompatActivity() {
         startTime = System.currentTimeMillis()
         Log.i(TAG, "Before handler=...")
         handler = object : Handler() {
+            var counter = 0
             override fun handleMessage(msg: Message) {
-                Log.i(TAG, "Start handleMessage")
                 super.handleMessage(msg)
+                counter++
 
-                if (gameOn) {
-                    Log.i(TAG, "GameOn = true")
-                    val seconds = (System.currentTimeMillis() - startTime) / 1000
-                    Log.i(TAG, "seconds = $seconds")
-                    handler.sendEmptyMessageDelayed(0, 1000)
-                    Log.i(TAG, "After sendEmptyMessageDelayed")
-                }else{
+                info.text = counter.toString()
+                Log.i(TAG, "New step counter = $counter")
+
+                if (counter < 100) {
+                    handler.sendEmptyMessageDelayed(0, 200)
+                } else {
+                    postExecute("Handler stopped")
                     Log.i(TAG, "Handler stopped")
+                    counter = 0
                 }
             }
         }
@@ -60,8 +68,7 @@ class AsyncActivity : AppCompatActivity() {
             object : AsyncTask<Double, Int, String>() {
                 var internetAvailable: Boolean = false
                 override fun onPreExecute() {
-                    progress.isVisible = true
-                    info.text = ""
+                    preExecute()
                     if (internetAvailable) cancel(internetAvailable)
                 }
 
@@ -69,15 +76,14 @@ class AsyncActivity : AppCompatActivity() {
                     if (isCancelled) return "AsyncTask cancelled"
 
                     for (i in 0..100) {
-                        Thread.sleep(200)
+                        Thread.sleep(20)
                         publishProgress(i)
                     }
                     return "AsyncTask stopped"
                 }
 
                 override fun onPostExecute(result: String?) {
-                    progress.isVisible = false
-                    info.text = result
+                    postExecute(result)
                 }
 
                 override fun onProgressUpdate(vararg values: Int?) {
@@ -87,7 +93,9 @@ class AsyncActivity : AppCompatActivity() {
         }
 
         btn2.setOnClickListener {
-
+            handler.sendEmptyMessage(0)
+            preExecute()
+            Log.i(TAG, "Handler started")
         }
 
         btn3.setOnClickListener {
