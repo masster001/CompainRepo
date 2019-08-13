@@ -24,6 +24,11 @@
             android:text="Go to the AsyncActivity"
             android:id="@+id/btn3"/>
 
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Go to the Cats"
+            android:id="@+id/btn4"/>
     <ImageView
             android:id="@+id/img"
             android:layout_width="match_parent"
