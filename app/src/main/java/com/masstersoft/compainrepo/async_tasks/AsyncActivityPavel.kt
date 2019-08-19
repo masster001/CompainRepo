@@ -1,19 +1,20 @@
 package com.masstersoft.compainrepo.async_tasks
 
-import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.AsyncTask
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Message
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.masstersoft.compainrepo.R
 import kotlinx.android.synthetic.main.activity_async.*
+import kotlinx.android.synthetic.main.activity_async.btn1
+import kotlinx.android.synthetic.main.activity_async.btn2
+import kotlinx.android.synthetic.main.activity_async.btn3
 import kotlinx.android.synthetic.main.activity_async_pavel.*
-import kotlinx.android.synthetic.main.activity_async_pavel.btn1
-import kotlinx.android.synthetic.main.activity_async_pavel.btn2
-import kotlinx.android.synthetic.main.activity_async_pavel.btn3
+
 
 class AsyncActivityPavel : AppCompatActivity() {
 
