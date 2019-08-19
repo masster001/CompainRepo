@@ -20,6 +20,12 @@
             android:text="ClassWork №24"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+    <Button
+            android:id="@+id/pBtnMain4"
+            android:text="ClassWork №26 (cats)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
 
 
 </LinearLayout>
